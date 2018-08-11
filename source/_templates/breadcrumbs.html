@@ -1,0 +1,28 @@
+{% extends "!breadcrumbs.html" %}
+
+{% block breadcrumbs %}
+
+  <div><a href="https://curis.online"><img src="{{ pathto('_static/images/banner.png', 1) }}"/></a></div>
+  <hr/>
+	{% if _('fhirnetapi') in pagename %}
+		<li class="wy-breadcrumbs-api"><a href="{{ pathto(master_doc) }}">{{ _('Docs') }}</a> &raquo;</li>
+	{% else %}
+		<li><a href="{{ pathto(master_doc) }}">{{ _('Docs') }}</a> &raquo;</li>
+	{% endif %}
+	{% for doc in parents %}
+		{% if loop.index == 1 %}
+			{% if _('pica') in pagename %}
+				<li><a href="{{ doc.link|e }}">PICA</a> &raquo;</li>
+			{% elif _('curis') in pagename %}
+				<li><a href="{{ doc.link|e }}">CURIS</a> &raquo;</li>
+			{% elif _('idiah') in pagename %}
+				<li><a href="{{ doc.link|e }}">IDIAH</a> &raquo;</li>
+			{% elif _('aqm') in pagename %}
+				<li><a href="{{ doc.link|e }}">AQM</a> &raquo;</li>
+			{% endif %}
+		{% else %}
+			<li><a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;</li>
+		{% endif %}
+	{% endfor %}
+    <li>{{ title }}</li>
+{% endblock %}
