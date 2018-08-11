@@ -1,6 +1,6 @@
 #!/bin/sh
 # make a subdirectory as root for github pages
-GH_BRANCH=gh_pages
+GH_BRANCH=gh-pages
 REMOTE_GIT_URL=origin
 SUBDIR=build/html
 
