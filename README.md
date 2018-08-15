@@ -8,6 +8,7 @@ Tested on the following
 | pip | ~18.0 |
 | virtualenv | ~15.1.0 |
 ## Getting started
+1. Install python ~ 3.6
 1. Create virtualenv
     ```bash
     virtualenv --python=<$PATH_TO_PYTHON3.6>/bin/python <$PATH_TO_ENV>/readthedocs_env/
@@ -26,7 +27,7 @@ Tested on the following
     ```
 1. Build the source
      ```bash
-    make linkcheck
+    make html 
     ```
 ## Running the tests
 ## Deployment
