@@ -2,11 +2,13 @@
 
 ## Prerequisites
 Tested on the following
+
 | Dependencies | Versions |
-| ------ | ------ |
-| Python | ~3.6.2 |
-| pip | ~18.0 |
-| virtualenv | ~15.1.0 |
+| ------------ | -------- |
+| Python       | ~3.6.2   |
+| pip          | ~18.0    |
+| virtualenv   | ~15.1.0  |
+
 ## Getting started
 1. Install python ~ 3.6
 1. Create virtualenv
